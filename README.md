@@ -1,13 +1,13 @@
-== Current for Request
+# Current for Request
 
-Written by stakr GbR (Jan Sebastian Siwy, Martin Spickermann, Henning Staib GbR; http://stakr.de)
+Written by stakr GbR (Jan Sebastian Siwy, Martin Spickermann, Henning Staib GbR; http://www.stakr.de/)
 
-Source: http://svn.stakr.de/rails/plugins/current_for_request
+Source: https://github.com/stakr/current_for_request
 
 Rack middleware to determine the current instance of a class before each request and reset to it to +nil+ after the request.
 
 
-=== Example
+## Example
 
 Assuming you have a class +User+ with the class attribute +current+: You can set and reset this attribute by adding an
 initializer into your 'conf/initializers' folder containing:
@@ -19,7 +19,7 @@ In this case the Rack middleware would simply set
     User.current = User.first
 
 before the request and reset
-    
+
     User.current = nil
 
 after the request.
